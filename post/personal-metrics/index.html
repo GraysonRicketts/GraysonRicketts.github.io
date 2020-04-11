@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Personal Metrics &middot; Grayson Ricketts</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="http://example.org/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="http://example.org/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="http://example.org/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="http://example.org/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-0d ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="http://example.org/"><h1>Grayson Ricketts</h1></a>
+      <p class="lead">
+         
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="http://example.org/">Home</a> </li>
+        <li><a href="https://github.com/graysonricketts/"> Github </a></li><li><a href="https://www.linkedin.com/in/graysonricketts/"> LinkedIn </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2020. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Personal Metrics</h1>
+  <time datetime=2020-04-05T19:15:48-0500 class="post-date">Sun, Apr 5, 2020</time>
+  <p>Is there something you can do that will make you twice as good at your job? What about more than twice as good? What about just better? There is an innate part of us that strives to improve. This is my story of trying to use metrics to improve.</p>
+<p>The ultimate goal was to find some combination of behaviors that made a day the best day it could be (or made a bad day bad). For example, did I need at least 9 hours of sleep to be happy or did I need between 100 - 150mg of caffeine a day to get the most done?</p>
+<p>First, I needed to figure out what specifically I was going to improve and how I was going to measure it. I’m a software engineer and I knew others in my field had tried to measure improvement through lines of code, PRs submitted, tickets completed, features released, code churn ratio, or other empirical measures. I looked at these measurements and could see they were too granular and could easily not capture improvement &ndash; life and work were more complex than one or two of those measurements. Instead of a bad empirical measure I used my subjective gut feeling to measure. I asked myself certain questions (Was I productive? How was my mood? Was I motivated? etc.) and answered very bad, bad, okay, good, or very good then used those answers as my “empiric” guide to answer the question, “was I improving?”</p>
+<p>Next I needed a behavior that would change so I could see if my productivity or some other measure changed when the behavior changed. The easiest behaviors to measure were caffeine, sleep, diet, number of meetings but I tried a couple of others too. Twice everyday I&rsquo;d enter all the different pieces of data into a spreadsheet.</p>
+<p>There are some cool trends and interesting numbers, but ultimately this is what I found: no behavior I measured significantly impacted my performance, and the subjective measurements for what makes a day “good” swung up-and-down together.</p>
+<h2 id="data-and-analysis">Data and analysis</h2>
+<h3 id="factors-progress-quality-mood-motivation">&ldquo;Factors&rdquo;: Progress, quality, mood, motivation</h3>
+<p>I started off this whole thing with a statement: I want to be very productive 80% of work days. Some people set a goal of running a 4 minute-mile or squatting 500lbs. I wanted to be productive.</p>
+<p>Let&rsquo;s start looking at the numbers! Note it was a 1-5 scale where 1 = very bad, 3 = okay, 5 = very good.</p>
+<blockquote>
+<p>progress: 3.62 / 5 (150 days tracked)</p>
+<p>quality: 3.79 / 5 (167 days tracked)</p>
+<p>mood: 3.63 / 5 (147 days tracked)</p>
+<p>stress: 3.96 / 5 (137 days tracked)</p>
+<p>motivation: 3.45 / 5 (128 days tracked)</p>
+<p>focus: 3.51 / 5 (113 days tracked)</p>
+</blockquote>
+<p>Respectable numbers but not top-notch stuff. However averages always hide things.</p>
+<p><img src="/progress-dist.png" alt="progress distribution">
+Here and in the other metric graphs there is a left tail, which is nice to see; means some bad days but higher density on the right so the average is skewed. Also, all the distributions and over-time graphs for these measures all look the same. Which seems to indicate a possible correlation&hellip;</p>
+<p><img src="/correlation-plot.png" alt="correlation plot">
+The filet mignon of this project. What is correlated with each other?! And now we get back to one of the biggest findings I had. <strong>Most likely, what made a good day wasn&rsquo;t related to any measurable behavior but was simply about how I felt (e.g. motivated, happy, stressed).</strong> Here are the corrleations that were &gt;= 0.75.</p>
+<blockquote>
+<p>progress-mood (0.88)</p>
+<p>mood-stress (0.8)</p>
+<p>mood-motivation (0.75)</p>
+<p>stress-motivation (0.82)</p>
+<p>motivation-focus (0.81)</p>
+</blockquote>
+<h3 id="caffeine">Caffeine</h3>
+<p>I was at about five cups of coffee a day, then quit caffeine for a while, then went to only tea. It was an interesting Goldilocks experience: I had too much, then too little, then found the sweet spot. A cool little visualization of a personal experiment I ran. Also, interesting because it had no large correlation with anything. Closest it came to correlating with anything was 0.47, so maybe there is something there but nothing definitive.
+<img src="/caffeine-over-time.png" alt="cafeine over time"></p>
+<h3 id="the-good-day-checkbox--observer-effect">The &ldquo;Good day&rdquo; checkbox / observer effect</h3>
+<p>Around the start of 2020 I added my favorite metric. &ldquo;Good day&rdquo; was a yes or no answer to “did I have a good day”? It’s my favorite metric because measuring it had an effect. A big effect! If I was having a bad day and I had the possibility of leaving that checkbox empty, I felt an intense drive to do things to make the rest of the day good. <a href="https://en.wikipedia.org/wiki/Hawthorne_effect">The act of measuring changed my behavior</a>.</p>
+<p>It changed the way I looked at things and my internal narrative &ndash; I’d tell myself that even though I had a headache all day it wasn&rsquo;t so bad since blah blah happened, or I’d be stressed out so I would take a rest day watching YouTube rather than workout. I loved that checkbox because it drew my attention to if I was maybe being a little crabby or unappreciative. It made me aware I had control to shape my happiness through internal dialogue and responsive external action.</p>
+<h2 id="results">Results</h2>
+<ol>
+<li>Software engineering &ldquo;productivity&rdquo; and &ldquo;improvement&rdquo; are not empirical quantities that are measurable.</li>
+</ol>
+<p>If I was happy I was “productive”. If I was not happy I was not “productive”. What truly was productive? I don’t know but am almost certain my general mood will swing with how productive I feel.</p>
+<ol start="2">
+<li>Fun</li>
+</ol>
+<p>Nothing tangible came out of this endeavour, but It was fun to try. From the outset I was skeptical I’d achieve anything, but thinking about new metrics to observe and behaviors I could measure then tweak was fun! Analyzing the results and seeing cool trends was fun! Seeing how my behavior changed when I was truly aware of a specific feeling was fun!</p>
+<ol start="3">
+<li>One less</li>
+</ol>
+<p>I was watching <em>National Treasure</em> with some friends when a section of dialogue caught my attention (and not because of Nicholas Cage’s fantastic acting).</p>
+<blockquote>
+<p>Ben: You know, Thomas Edison tried and failed nearly 2,000 times to develop the carbonized cotton-thread filament for the incandescent light bulb.</p>
+<p>Riley: Edison?</p>
+<p>Ben: And when asked about it, he said &ldquo;I didn&rsquo;t fail; I found out 2,000 ways how not to make a light bulb,&rdquo; but he only needed one way to make it work.</p>
+</blockquote>
+<p>Silly movie; oddly wise quote. A bit of wisdom that can be applied to this project.</p>
+<p>Someone could look at this project as a failure; I did not find any ways to improve and I came out more uncertain about the prospects of scientifically determining a way to improve in my career. However, I do not see it as a failure. Now I know one more way I&rsquo;m not going to improve.</p>
+<h5 id="reference">Reference</h5>
+<ul>
+<li><a href="https://github.com/GraysonRicketts/Personal-Metrics">You can see all of my investigation, analysis, notes, and the data on my GitHub</a></li>
+</ul>
+
+</div>
+
+
+    </main>
+
+    
+      
+    
+  </body>
+</html>

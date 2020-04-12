@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Grayson Ricketts</title>
-    <link>https://www.graysonricketts.com/</link>
+    <link>www.graysonricketts.com/</link>
     <description>Recent content on Grayson Ricketts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 11 Apr 2020 17:35:48 -0500</lastBuildDate>
     
-	<atom:link href="https://www.graysonricketts.com/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="www.graysonricketts.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Personal Metrics</title>
-      <link>https://www.graysonricketts.com/post/personal-metrics/</link>
+      <link>www.graysonricketts.com/post/personal-metrics/</link>
       <pubDate>Sat, 11 Apr 2020 17:35:48 -0500</pubDate>
       
-      <guid>https://www.graysonricketts.com/post/personal-metrics/</guid>
+      <guid>www.graysonricketts.com/post/personal-metrics/</guid>
       <description>Is there something you can do that will make you twice as good at your job? What about more than twice as good? What about just better? There is an innate part of us that strives to improve. This is my story of trying to use metrics to improve.
 The ultimate goal was to find some combination of behaviors that made a day the best day it could be (or made a bad day bad).</description>
     </item>

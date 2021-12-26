@@ -6,10 +6,20 @@
     <description>Recent content in Posts on Grayson Ricketts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 11 Apr 2020 17:35:48 -0500</lastBuildDate>
+    <lastBuildDate>Sun, 26 Dec 2021 06:27:10 -0600</lastBuildDate>
     
 	<atom:link href="https://graysonricketts.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Team Routines</title>
+      <link>https://graysonricketts.com/post/team-routines/</link>
+      <pubDate>Sun, 26 Dec 2021 06:27:10 -0600</pubDate>
+      
+      <guid>https://graysonricketts.com/post/team-routines/</guid>
+      <description>A team should have a balance of process, efficiency, and autonomy. Here’s a rough outline of the process our team has been using1. The “why’s” and reasonings behind them are further below.
+ Deep retrospectives every three weeks Shallower retrospectives at the start of the week, every week, before we plan Daily check-ins at the start of the day to discuss blockers, coordinate collaboration, and build camaraderie Planning is done weekly and quarterly Most work is picked up by someone rather than assigned out at the start of the week  Goals I set up routines to achieve a set of goals.</description>
+    </item>
     
     <item>
       <title>Personal Metrics</title>
@@ -19,6 +29,15 @@
       <guid>https://graysonricketts.com/post/personal-metrics/</guid>
       <description>Is there something you can do that will make you twice as good at your job? What about more than twice as good? What about just better? There is an innate part of us that strives to improve. This is my story of trying to use metrics to improve.
 The ultimate goal was to find some combination of behaviors that made a day the best day it could be (or made a bad day bad).</description>
+    </item>
+    
+    <item>
+      <title>Experiments</title>
+      <link>https://graysonricketts.com/post/experiments/</link>
+      <pubDate>Tue, 04 Feb 2020 06:25:51 -0600</pubDate>
+      
+      <guid>https://graysonricketts.com/post/experiments/</guid>
+      <description>Every new year resolutions are made yet a month later many have been given up. The idea of a resolution is awesome; make a commitment to achieve or build a new habit that will positively affect your life. But there&amp;rsquo;s always that fact that I and everyone knows: most resolutioners will quit before February. Rather than resolve to one big thing why not try something else? Try a smaller thing?</description>
     </item>
     
   </channel>

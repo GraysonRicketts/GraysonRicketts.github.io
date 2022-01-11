@@ -6,10 +6,20 @@
     <description>Recent content on Grayson Ricketts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 31 Dec 2021 10:12:18 -0600</lastBuildDate>
+    <lastBuildDate>Tue, 11 Jan 2022 16:55:36 -0600</lastBuildDate>
     
 	<atom:link href="https://graysonricketts.com/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Planning for an objective: Base system</title>
+      <link>https://graysonricketts.com/post/planning-base/</link>
+      <pubDate>Tue, 11 Jan 2022 16:55:36 -0600</pubDate>
+      
+      <guid>https://graysonricketts.com/post/planning-base/</guid>
+      <description>If there’s something remotely important, it helps to have a plan1. This is the system I use for planning.
+Assumptions There are scenarios where this system doesn’t work perfectly, but with minor modifications the system can respond to the new scenarios. I’ll go into how to handle those scenarios in another post, but before we augment the system we have to lay out the system. In order to layout the system here are some simplifying assumptions.</description>
+    </item>
     
     <item>
       <title>My purpose and values, going into 2022</title>

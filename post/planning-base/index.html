@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="https://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.68.3" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Planning for an objective: Base system &middot; Grayson Ricketts</title>
+  <meta name="description" content="" />
+
+  
+  <link type="text/css" rel="stylesheet" href="https://graysonricketts.com/css/print.css" media="print">
+  <link type="text/css" rel="stylesheet" href="https://graysonricketts.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://graysonricketts.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://graysonricketts.com/css/hyde.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  
+</head>
+
+  <body class="theme-base-0d ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://graysonricketts.com/"><h1>Grayson Ricketts</h1></a>
+      <p class="lead">
+         
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://graysonricketts.com/">Home</a> </li>
+        <li><a href="https://github.com/graysonricketts/"> Github </a></li><li><a href="https://www.linkedin.com/in/graysonricketts/"> LinkedIn </a></li>
+      </ul>
+    </nav>
+
+    <p>&copy; 2022. All rights reserved. </p>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Planning for an objective: Base system</h1>
+  <time datetime=2022-01-11T16:55:36-0600 class="post-date">Tue, Jan 11, 2022</time>
+  <p>If there’s something remotely important, it helps to have a plan<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. This is the system I use for planning.</p>
+<h2 id="assumptions">Assumptions</h2>
+<p>There are scenarios where this system doesn’t work perfectly, but with minor modifications the system can respond to the new scenarios. I’ll go into how to handle those scenarios in another post, but before we augment the system we have to lay out the system. In order to layout the system here are some simplifying assumptions.</p>
+<ul>
+<li>The planner knows the domain</li>
+<li>The planner knows the existing system</li>
+<li>The planner knows the objective isn’t going to change</li>
+</ul>
+<h2 id="the-plan-for-planning">The plan for planning</h2>
+<p>Roughly block out the piece work → Break down each piece of work→ Recurse until each unit of work is no more than one or two days.</p>
+<h3 id="blocking">Blocking</h3>
+<p>Using the objectives, domain, and understanding of the current system, figure out each major section of work. In addition, work should be broken up so that each section is testable. This is probably the hardest part because sometimes something complex has many moving parts. In those cases I recommend getting a skeleton setup and having a sample output be the verification (e.g. returns a default message or logs a message).</p>
+<p>I’ve found these blocks of work fall into roughly the same categories. Below are several that I’ve found useful.</p>
+<h4 id="functional-blocks">Functional blocks</h4>
+<p>These are the pieces of work about getting the actual thing done. For example, it could be building out a specific page, adding a new feature, or modifying the product. I generally think of these as the pieces of work you can point to in the software.</p>
+<h4 id="technical-blocks">Technical blocks</h4>
+<p>These are the pieces of work behind the scenes that are necessary to get the functional blocks working. It could be setting up a framework or library, it could be refactoring the old code, it could be setting up a new integration required for functionality.</p>
+<h4 id="process-blocks">Process blocks</h4>
+<p>These are the pieces of work about the work. For example, it could be the work required for releasing the software<sup id="fnref:2"><a href="#fn:2" class="footnote-ref" role="doc-noteref">2</a></sup>.</p>
+<h3 id="arranging-the-blocks">Arranging the blocks</h3>
+<p>Each block is a conceptual unit of work. Almost every time, blocks are going to be dependent on other blocks, forming chains of work. Once you have the blocks, figure out which blocks need to be completed first. For example, you probably need to set up your API server framework before you can build out integration with Stripe.</p>
+<p>Tip: Draw the blocks. Use arrows to figure out the dependencies between them. This will let you know what can be parallelized and how to start.</p>
+<p>Note: The block diagram should be DAG. If it’s not then make it one. We have to start somewhere.</p>
+<h3 id="breaking-down">Breaking down</h3>
+<p>Each block has its own large piece of work. Within the block are a bunch of smaller things that need to happen. For example, if you’re setting up an api framework you might need to set up the logging middleware or add authentication. Each major section is it’s own unit of work, albeit smaller. Once all the smaller pieces are broken down then again figure out the dependencies.</p>
+<h3 id="recursing">Recursing</h3>
+<p>I recommend stopping planning once each unit of work is about 1 or 2 days effort. If the broken down blocks are too big then do the process again. If the broken down blocks are too small then add the details as helpful notes.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>Just because there is a plan doesn’t mean I stick to the plan. Getting to the objective is more important than sticking to the plan. Having a plan dramatically increases the chances of getting the objective done. <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+<li id="fn:2" role="doc-endnote">
+<p>Some radical engineers may be saying everything should be instantly deployed once it’s merged. That’s nice if you work on some non-critical website selling junk we don’t need, but some folks work on code that falls under FDA regulation, in which case there is non-trivial process work to do. <a href="#fnref:2" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+
+
+    </main>
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'G-BYH5447DPV', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+  </body>
+</html>

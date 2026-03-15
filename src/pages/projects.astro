@@ -34,7 +34,6 @@ const projects = (await getCollection('projects'))
             description={p.data.description}
             url={p.data.url}
             repoUrl={p.data.repoUrl}
-            tags={p.data.tags}
           />
         ))}
       </div>

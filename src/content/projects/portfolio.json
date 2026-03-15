@@ -3,7 +3,6 @@
   "description": "Personal site built with Astro and Tailwind CSS. Static, fast, and dark-mode ready.",
   "url": "https://GraysonRicketts.github.io",
   "repoUrl": "https://github.com/GraysonRicketts/GraysonRicketts.github.io",
-  "tags": ["Astro", "Tailwind CSS", "TypeScript"],
   "featured": true,
   "order": 1
 }

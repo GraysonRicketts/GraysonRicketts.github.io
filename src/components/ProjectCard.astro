@@ -4,10 +4,9 @@ interface Props {
   description: string;
   url: string;
   repoUrl?: string;
-  tags: string[];
 }
 
-const { title, description, url, repoUrl, tags } = Astro.props;
+const { title, description, url, repoUrl } = Astro.props;
 ---
 
 <a
@@ -40,15 +39,7 @@ const { title, description, url, repoUrl, tags } = Astro.props;
     {description}
   </p>
 
-  <div class="flex items-center justify-between gap-3">
-    <div class="flex flex-wrap gap-1.5">
-      {tags.map((tag) => (
-        <span class="text-xs px-2 py-0.5 rounded-md bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 font-medium">
-          {tag}
-        </span>
-      ))}
-    </div>
-
+  <div class="flex items-center justify-end gap-3">
     {repoUrl && (
       <a
         href={repoUrl}

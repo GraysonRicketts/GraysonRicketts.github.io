@@ -1,0 +1,37 @@
+---
+title: "The Case for Boring Technology"
+description: "Why choosing proven, well-understood tools is often the most interesting engineering decision you can make."
+publishDate: 2025-03-01
+tags: ["engineering", "architecture", "decisions"]
+featured: true
+---
+
+Every few months, a new tool arrives promising to fix the thing that's been bothering you about the old tool. Sometimes it does. More often, it trades one set of problems for another set you haven't met yet.
+
+This isn't an argument against new technology. It's an argument for knowing what you're choosing and why.
+
+## The hidden cost of novelty
+
+New tools have a real cost that rarely shows up in the benchmark post: you don't know where they fail yet. Every technology has failure modes. Postgres has them. Linux has them. The reason those failure modes don't destroy you is that millions of people have hit them before you, written about them, and built tooling around them.
+
+With a new tool, you're the person who discovers the failure mode. That's expensive.
+
+## When boring is the right call
+
+Boring technology is right when:
+
+- **The problem is well-understood.** If you need a relational database, you need a relational database. Postgres is boring. It's also extremely good.
+- **The team needs to be able to debug it.** You can't debug something nobody understands.
+- **The failure modes matter.** In production, boring is predictable. Predictable is safe.
+
+## When it isn't
+
+Boring technology is wrong when the boring option genuinely can't do the job, or when the overhead of the boring option is disproportionate to the problem. Using a full relational database for a config file is boring in the wrong way.
+
+The skill is knowing the difference. That mostly comes from having been burned by both sides.
+
+## The meta-point
+
+The most interesting engineering decisions aren't about tools. They're about tradeoffs. Any experienced engineer can evaluate a tool. The harder question is: what are you optimizing for, and does this tool help you get there?
+
+Answer that clearly and the tool choice usually follows.

@@ -1,0 +1,71 @@
+---
+import Base from './Base.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  publishDate: Date;
+  updatedDate?: Date;
+  tags: string[];
+}
+
+const { title, description, publishDate, updatedDate, tags } = Astro.props;
+
+const formattedPublish = publishDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+
+const formattedUpdate = updatedDate?.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+---
+
+<Base title={`${title} — Grayson Ricketts`} description={description}>
+  <article class="max-w-3xl mx-auto px-6 py-16">
+    <!-- Back link -->
+    <a
+      href="/writing"
+      class="inline-flex items-center gap-1.5 text-sm text-zinc-500 dark:text-zinc-400 hover:text-orange-500 dark:hover:text-orange-400 transition-colors mb-10"
+    >
+      <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M19 12H5M12 5l-7 7 7 7"/>
+      </svg>
+      Writing
+    </a>
+
+    <!-- Header -->
+    <header class="mb-10">
+      <div class="flex flex-wrap gap-2 mb-4">
+        {tags.map((tag) => (
+          <span class="text-xs px-2 py-1 rounded-md bg-orange-500/10 text-orange-600 dark:text-orange-400 font-medium">
+            {tag}
+          </span>
+        ))}
+      </div>
+      <h1 class="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100 mb-4 leading-tight">
+        {title}
+      </h1>
+      <p class="text-lg text-zinc-600 dark:text-zinc-400 mb-6 leading-relaxed">
+        {description}
+      </p>
+      <div class="flex items-center gap-4 text-sm text-zinc-500 dark:text-zinc-500 border-t border-zinc-200 dark:border-zinc-800 pt-6">
+        <time datetime={publishDate.toISOString()}>
+          {formattedPublish}
+        </time>
+        {updatedDate && (
+          <span class="text-zinc-400 dark:text-zinc-600">·</span>
+          <span>Updated {formattedUpdate}</span>
+        )}
+      </div>
+    </header>
+
+    <!-- Content -->
+    <div class="prose prose-zinc dark:prose-invert max-w-none prose-headings:font-bold prose-headings:tracking-tight prose-a:text-orange-600 dark:prose-a:text-orange-400 prose-a:no-underline hover:prose-a:underline prose-code:text-orange-600 dark:prose-code:text-orange-400 prose-code:bg-zinc-100 dark:prose-code:bg-zinc-800 prose-code:px-1 prose-code:py-0.5 prose-code:rounded prose-code:font-normal prose-code:text-sm">
+      <slot />
+    </div>
+  </article>
+</Base>

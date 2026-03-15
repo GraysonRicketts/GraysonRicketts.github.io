@@ -8,13 +8,13 @@
     "description": {
       "type": "string"
     },
-    "url": {
+    "publishDate": {
       "type": "string",
-      "format": "uri"
+      "format": "date-time"
     },
-    "repoUrl": {
+    "updatedDate": {
       "type": "string",
-      "format": "uri"
+      "format": "date-time"
     },
     "tags": {
       "default": [],
@@ -23,13 +23,13 @@
         "type": "string"
       }
     },
-    "featured": {
+    "draft": {
       "default": false,
       "type": "boolean"
     },
-    "order": {
-      "default": 99,
-      "type": "number"
+    "featured": {
+      "default": false,
+      "type": "boolean"
     },
     "$schema": {
       "type": "string"
@@ -38,10 +38,10 @@
   "required": [
     "title",
     "description",
-    "url",
+    "publishDate",
     "tags",
-    "featured",
-    "order"
+    "draft",
+    "featured"
   ],
   "additionalProperties": false
 }

@@ -67,7 +67,7 @@ const { articles, projects } = Astro.props;
             <ArticleCard
               title={a.data.title}
               description={a.data.description}
-              slug={a.slug}
+              slug={a.id.replace(/\.(mdx?)$/, '')}
               publishDate={a.data.publishDate}
               tags={a.data.tags}
             />

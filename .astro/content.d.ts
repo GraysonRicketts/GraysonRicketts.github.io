@@ -142,7 +142,7 @@ declare module 'astro:content' {
   id: string;
   body?: string;
   collection: "reading";
-  data: InferEntrySchema<"reading">;
+  data: any;
   rendered?: RenderedContent;
   filePath?: string;
 }>;
@@ -150,7 +150,7 @@ declare module 'astro:content' {
   id: string;
   body?: string;
   collection: "writing";
-  data: InferEntrySchema<"writing">;
+  data: any;
   rendered?: RenderedContent;
   filePath?: string;
 }>;

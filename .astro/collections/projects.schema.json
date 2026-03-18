@@ -16,6 +16,9 @@
       "type": "string",
       "format": "uri"
     },
+    "gif": {
+      "type": "string"
+    },
     "featured": {
       "default": false,
       "type": "boolean"

@@ -1,0 +1,9 @@
+{
+  "title": "Stripe Visualizer",
+  "description": "See how Stripe and Banks work together to process payments.",
+  "url": "https://github.com/GraysonRicketts",
+  "repoUrl": "https://github.com/GraysonRicketts/stripe-visualizer",
+  "featured": true,
+  "order": 1,
+  "gif": "stripe-visualizer.gif"
+}

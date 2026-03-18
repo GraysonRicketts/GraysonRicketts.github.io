@@ -1,12 +1,6 @@
 ---
 import ThemeToggle from "./ThemeToggle.astro";
 
-const navLinks = [
-  { href: "/", label: "/home" },
-  { href: "/projects", label: "/projects" },
-  { href: "/reading", label: "/reading" },
-];
-
 const currentPath = Astro.url.pathname;
 ---
 
@@ -16,26 +10,7 @@ const currentPath = Astro.url.pathname;
   <nav
     class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between gap-6"
   >
-    <!-- Desktop nav links -->
-    <div class="hidden md:flex items-center gap-7">
-      {
-        navLinks.map(({ href, label }) => (
-          <a
-            href={href}
-            class={`text-sm font-medium transition-colors ${
-              currentPath === href ||
-              (href !== "/" && currentPath.startsWith(href))
-                ? "text-orange-500 dark:text-orange-400"
-                : "text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100"
-            }`}
-          >
-            {label}
-          </a>
-        ))
-      }
-    </div>
-
-    <!-- Right: social + resume + toggle -->
+    <!-- social + resume + toggle -->
     <div class="flex items-center gap-2">
       <!-- GitHub -->
 
@@ -56,8 +31,6 @@ const currentPath = Astro.url.pathname;
           ></path>
         </svg>
       </a>
-
-      
 
       <!-- LinkedIn -->
       <a
@@ -145,37 +118,6 @@ const currentPath = Astro.url.pathname;
       </button>
     </div>
   </nav>
-
-  <!-- Mobile nav dropdown -->
-  <div
-    id="mobile-menu"
-    class="hidden md:hidden border-t border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-zinc-950"
-  >
-    <div class="max-w-6xl mx-auto px-6 py-4 flex flex-col gap-1">
-      {
-        navLinks.map(({ href, label }) => (
-          <a
-            href={href}
-            class={`text-sm font-medium px-3 py-2 rounded-lg transition-colors ${
-              currentPath === href ||
-              (href !== "/" && currentPath.startsWith(href))
-                ? "text-orange-500 dark:text-orange-400 bg-orange-500/10"
-                : "text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-800"
-            }`}
-          >
-            {label}
-          </a>
-        ))
-      }
-      <a
-        href="/resume.pdf"
-        download
-        class="text-sm font-medium px-3 py-2 rounded-lg text-orange-500 dark:text-orange-400 hover:bg-orange-500/10 transition-colors mt-1"
-      >
-        Download Resume
-      </a>
-    </div>
-  </div>
 </header>
 
 <script>

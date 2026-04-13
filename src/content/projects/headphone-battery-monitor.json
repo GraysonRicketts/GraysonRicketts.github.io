@@ -1,0 +1,9 @@
+{
+  "title": "Headphone Battery Monitor",
+  "description": "A windows taskbar monitor to watch the battery level of your wireless headphones.",
+  "url": "https://github.com/GraysonRicketts/headphone-battery-monitor",
+  "repoUrl": "https://github.com/GraysonRicketts/headphone-battery-monitor",
+  "featured": true,
+  "order": 2,
+  "gif": "headphone-battery-monitor.png"
+}

@@ -1,8 +1,8 @@
 {
   "title": "Dark Mode Chrome Extension",
   "description": "A simple Chrome extension that adds dark mode functionality to any website.",
-  "url": "https://github.com/GraysonRicketts/simple-dark-mode",
-  "repoUrl": "https://github.com/GraysonRicketts/simple-dark-mode",
+  "url": "https://github.com/GraysonRicketts/Simple-Chrome-Dark-Mode-Extension",
+  "repoUrl": "https://github.com/GraysonRicketts/Simple-Chrome-Dark-Mode-Extension",
   "featured": true,
   "order": 2,
   "gif": "dark-mode.gif"
